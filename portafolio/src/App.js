@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import Spanish from './components/Spanish';
 import English from './components/English';
 import Social from './components/Social';
+import foto from './foto.jpg';
 import {faLanguage} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -12,6 +13,7 @@ const Container = styled.div`
     padding: 25px; 
     background-color: #fff;
     border-radius: 15px;
+    text-align: center;
 `;
 
 const TopOptions = styled.div`
@@ -30,25 +32,41 @@ const AboutButton = styled.button`
   }
 `;
 
+
+const Imagen = styled.img`
+
+  max-width: 400px;
+  max-height: 200px;
+  border-radius: 50%;
+  margin-top: 2.5rem;
+  text-align: center;
+
+  -webkit-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.75);
+`;
+
+
 function App() {
 
   const [language, changeLanguage] = useState('EN');
+  const [aboutLanguage, changeAbout] = useState('About Me');
 
   //useEffect(() => {
     //changeLanguage('EN');
   //});
 
   const handleChange = e => {
-    //actualizar el state
-    let lenguaje = e.target.value;
+  //actualizar el state
+  let lenguaje = e.target.value;
 
-    changeLanguage(lenguaje);
+  changeLanguage(lenguaje);
 }
 
   return (
       <Container>
         <TopOptions>
-          <AboutButton>About Me</AboutButton>
+          <AboutButton>{aboutLanguage}</AboutButton>
           <Social/>
             <div>
             <FontAwesomeIcon icon={faLanguage} />
@@ -61,10 +79,11 @@ function App() {
               </select>
             </div>
         </TopOptions>
-        {language === 'EN' ? <English/> : <Spanish/>} 
-          
-
-
+        <Imagen
+            src={foto}
+            alt="Oswaldo García Salas"
+            />
+        {language === 'EN' ? <English changeAbout={changeAbout}/> : <Spanish changeAbout={changeAbout}/>} 
       </Container>
   );
 }

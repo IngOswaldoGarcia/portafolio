@@ -1,6 +1,5 @@
 import React, {Fragment} from 'react';
 import styled from '@emotion/styled'; 
-import foto from '../foto.jpg';
 import vista from '../vista.jpg';
 //import axios from 'axios';
 import { faPhoneAlt, faMapMarkerAlt, faEnvelope} from "@fortawesome/free-solid-svg-icons";
@@ -9,17 +8,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Description = styled.div`
   text-align: center;
-`;
-
-const Imagen = styled.img`
-  max-width: 400px;
-  max-height: 400px;
-  border-radius: 50%;
-  margin-top: 2.5rem;
-
-  -webkit-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.75);
-  -moz-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.75);
-  box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.75);
 `;
 
 const Main_Menu = styled.div`
@@ -51,13 +39,12 @@ const VistaImg = styled.img`
 `;
 
 
-const Spanish = () => ( 
+const Spanish = ({changeAbout}) => 
+  {
+    changeAbout('Sobre Mí');
+    return ( 
         <Fragment>
         <Description>
-            <Imagen
-            src={foto}
-            alt="Oswaldo García Salas"
-            />
             <NameCreator>Ing. Oswaldo García Salas</NameCreator>
             <p>Desarrolador de Aplicaciones Web y Moviles</p>
             <p><FontAwesomeIcon icon={faPhoneAlt}/> <FontAwesomeIcon icon={faWhatsapp} />  (+52) 438 - 111 - 5621</p>
@@ -113,5 +100,6 @@ const Spanish = () => (
         </Main_Menu>
       </Fragment>
      );
+  }
  
 export default Spanish;
