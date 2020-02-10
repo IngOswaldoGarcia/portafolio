@@ -3,12 +3,14 @@ import styled from '@emotion/styled';
 import Spanish from './components/Spanish';
 import English from './components/English';
 import Social from './components/Social';
+import AboutMessage from './components/AboutMessage';
+import Popup from "reactjs-popup";
 import foto from './foto.jpg';
 import {faLanguage} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Container = styled.div`
-    max-width: 90%;
+    max-width: 70%;
     margin: 50px auto;
     padding: 25px; 
     background-color: #fff;
@@ -22,8 +24,10 @@ const TopOptions = styled.div`
 `;
 
 const AboutButton = styled.button`
-  padding: 5px 10px;
+  padding: 10px 10px;
   border-radius: 15px;
+  min-width: 90px;
+  min-height: 40px;
   background-color: #FF0000;
   color: #fff;
   border: 0px solid #999999;
@@ -31,7 +35,6 @@ const AboutButton = styled.button`
     cursor: pointer;
   }
 `;
-
 
 const Imagen = styled.img`
 
@@ -56,23 +59,28 @@ function App() {
     //changeLanguage('EN');
   //});
 
-  const handleChange = e => {
+  const handleChangeLanguage = e => {
   //actualizar el state
-  let lenguaje = e.target.value;
-
-  changeLanguage(lenguaje);
+    let lenguaje = e.target.value;
+    changeLanguage(lenguaje);
 }
+
+  const handleClickPop = e => {
+  }
 
   return (
       <Container>
+
         <TopOptions>
-          <AboutButton>{aboutLanguage}</AboutButton>
+          <AboutButton
+            onClick = {handleClickPop}
+          >{aboutLanguage}</AboutButton>
           <Social/>
             <div>
             <FontAwesomeIcon icon={faLanguage} />
               <select
                 name="language"
-                onChange={handleChange}
+                onChange={handleChangeLanguage}
               >
                 <option value="EN">English</option>
                 <option value="ES">Español</option>

@@ -1,9 +1,10 @@
 import React, {Fragment} from 'react';
 import styled from '@emotion/styled'; 
 import vista from '../vista.jpg';
+import csharp from '../csharp.png';
 //import axios from 'axios';
-import { faPhoneAlt, faMapMarkerAlt, faEnvelope} from "@fortawesome/free-solid-svg-icons";
-import { faWhatsapp } from "@fortawesome/free-brands-svg-icons"; 
+import { faPhoneAlt, faMapMarkerAlt, faEnvelope, faCalendarAlt} from "@fortawesome/free-solid-svg-icons";
+import { faWhatsapp} from "@fortawesome/free-brands-svg-icons"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Description = styled.div`
@@ -25,8 +26,8 @@ const Project = styled.div`
   -moz-border-radius: 5px 5px 5px 5px;
   -webkit-border-radius: 5px 5px 5px 5px;
   border: 0px solid #999999;
-  padding: 10px;
   margin: 10px 0;
+  padding: 10px 0;
   color: #fff;
 `;
 
@@ -36,6 +37,19 @@ const NameCreator = styled.h1`
 
 const VistaImg = styled.img`
   width: 100%;
+  padding: 0px;
+  `;
+
+const CSharpIcon = styled.img`
+    max-width: 50px;
+`;
+
+const ListTechnologies = styled.div`
+
+`;
+
+const Technology = styled.div`
+
 `;
 
 
@@ -58,9 +72,17 @@ const Spanish = ({changeAbout}) =>
             <VistaImg
                 src={vista}
             />
-            <p>Lapso de tiempo</p>
-            <p>Descripción</p>
-            <p>Tecnologías</p>
+            <p><FontAwesomeIcon icon={faCalendarAlt} /> mayo 2017 - agosto del 2018</p>
+            <p>Proyecto Lucky Jump fue programado en C# a través del motor grafico Unity Engine, Firebase además de algunas herramientas de diseño como lo es
+              Photoshop, Ilustrator, etc. El proyecto tuvo como objetivo ser comercializada
+                hacia distintos tipos de usuarios a través de la plataforma de Play Store y obtener ganancias con la implementación de publicidad.</p>
+            <ListTechnologies>
+              <Technology>
+                <CSharpIcon
+                  src={csharp}
+                />
+              </Technology>
+            </ListTechnologies>
             <a href="">Ir al sitio</a>
             <a href="">Ver en GitHub</a>
             </Project>
