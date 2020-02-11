@@ -49,13 +49,12 @@ const ListTechnologies = styled.div`
 `;
 
 const Technology = styled.div`
-
+  
 `;
 
 
-const Spanish = ({changeAbout}) => 
+const Spanish = () => 
   {
-    changeAbout('Sobre Mí');
     return ( 
         <Fragment>
         <Description>

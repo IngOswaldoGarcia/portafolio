@@ -1,13 +1,10 @@
-import React, {useState, useEffect} from 'react';
-import styled from '@emotion/styled'; 
+import React, { useState, useEffect } from 'react';
+import styled from '@emotion/styled';
 import Spanish from './components/Spanish';
 import English from './components/English';
 import Social from './components/Social';
 import AboutMessage from './components/AboutMessage';
-import Popup from "reactjs-popup";
 import foto from './foto.jpg';
-import {faLanguage} from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Container = styled.div`
     max-width: 70%;
@@ -23,18 +20,7 @@ const TopOptions = styled.div`
   justify-content: space-between;
 `;
 
-const AboutButton = styled.button`
-  padding: 10px 10px;
-  border-radius: 15px;
-  min-width: 90px;
-  min-height: 40px;
-  background-color: #FF0000;
-  color: #fff;
-  border: 0px solid #999999;
-  &:hover{
-    cursor: pointer;
-  }
-`;
+
 
 const Imagen = styled.img`
 
@@ -52,48 +38,40 @@ const Imagen = styled.img`
 
 function App() {
 
-  const [language, changeLanguage] = useState('EN');
+  const [language, changeLanguage] = useState(false);
   const [aboutLanguage, changeAbout] = useState('About Me');
 
   //useEffect(() => {
-    //changeLanguage('EN');
+  //changeLanguage('EN');
   //});
 
   const handleChangeLanguage = e => {
-  //actualizar el state
-    let lenguaje = e.target.value;
-    changeLanguage(lenguaje);
-}
-
-  const handleClickPop = e => {
+    changeLanguage(e.target.checked);
   }
 
   return (
-      <Container>
-
-        <TopOptions>
-          <AboutButton
-            onClick = {handleClickPop}
-          >{aboutLanguage}</AboutButton>
-          <Social/>
-            <div>
-            <FontAwesomeIcon icon={faLanguage} />
-              <select
-                name="language"
-                onChange={handleChangeLanguage}
-              >
-                <option value="EN">English</option>
-                <option value="ES">Español</option>
-              </select>
-            </div>
+    <Container>
+      <TopOptions>
+        <AboutMessage
+          language={language}
+        />
+        <Social />
+        <p>EN</p>
+        <label className="switch">
+          <input type="checkbox"
+                      onChange={handleChangeLanguage}
+          ></input>
+          <span className="slider round"></span>
+          </label>
+          <p>ES</p>
         </TopOptions>
         <Imagen
-            src={foto}
-            alt="Oswaldo García Salas"
-            />
-        {language === 'EN' ? <English changeAbout={changeAbout}/> : <Spanish changeAbout={changeAbout}/>} 
+          src={foto}
+          alt="Oswaldo García Salas"
+        />
+        {!(language) ? <English/> : <Spanish/>} 
       </Container>
-  );
-}
-
-export default App;
+      );
+    }
+    
+    export default App;

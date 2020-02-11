@@ -42,6 +42,8 @@ const Project = styled.div`
 
 const NameCreator = styled.h1`
   margin: 5px;
+  font-family: 'Helvetica';
+  font-weight: bold;
 `;
 
 const VistaImg = styled.img`
@@ -98,9 +100,19 @@ const GoGit = styled.a`
   border-radius: 10px;
 `;
 
-const English = ({ changeAbout }) => {
+const WAColor = styled.span`
+  color: #4FCE5D;
+`;
 
-  changeAbout('About Me');
+const MLColor = styled.span`
+  color: #D44638;
+`;
+
+const PinColor = styled.span`
+  color: #FE7569;
+`;
+
+const English = () => {
 
   return (
     <Fragment>
@@ -108,9 +120,9 @@ const English = ({ changeAbout }) => {
       <Content>
         <NameCreator>Engr. Oswaldo García Salas</NameCreator>
         <p>Web & Mobile Applications Developer</p>
-        <p><FontAwesomeIcon icon={faPhoneAlt} /> <FontAwesomeIcon icon={faWhatsapp} />  (+52) 438 - 111 - 5621</p>
-        <p><FontAwesomeIcon icon={faEnvelope} />  chinovyou@gmail.com</p>
-        <p><FontAwesomeIcon icon={faMapMarkerAlt} />  Morelia, Michoacan. MX.</p>
+        <p><FontAwesomeIcon icon={faPhoneAlt} /> <WAColor><FontAwesomeIcon icon={faWhatsapp} /> </WAColor>  (+52) 438 - 111 - 5621</p>
+        <p><MLColor><FontAwesomeIcon icon={faEnvelope} /> </MLColor>  chinovyou@gmail.com</p>
+        <p><PinColor><FontAwesomeIcon icon={faMapMarkerAlt} /> </PinColor>  Morelia, Michoacán. MX.</p>
 
       </Content>
       <Main_Menu>
