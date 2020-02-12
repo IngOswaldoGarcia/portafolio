@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import styled from '@emotion/styled';
 import Spanish from './components/Spanish';
 import English from './components/English';
@@ -9,18 +9,23 @@ import foto from './foto.jpg';
 const Container = styled.div`
     max-width: 70%;
     margin: 50px auto;
-    padding: 25px; 
+    padding: 25px 5%; 
     background-color: #fff;
     border-radius: 15px;
     text-align: center;
+    @media (max-width: 500px){
+      max-width: 100%;
+      margin: 0px auto;
+      padding: 20px 5%; 
+      background-color: #fff;
+      border-radius: 0;
+    } 
 `;
 
 const TopOptions = styled.div`
   display: flex;
   justify-content: space-between;
 `;
-
-
 
 const Imagen = styled.img`
 
@@ -39,7 +44,6 @@ const Imagen = styled.img`
 function App() {
 
   const [language, changeLanguage] = useState(false);
-  const [aboutLanguage, changeAbout] = useState('About Me');
 
   //useEffect(() => {
   //changeLanguage('EN');

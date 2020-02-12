@@ -7,8 +7,10 @@ import unity from '../unity.png';
 import firebase from '../fire.png';
 import luckyjump from '../lucky.png';
 import nayar from '../nayar.png';
+
 //import axios from 'axios';
 import { faPhoneAlt, faMapMarkerAlt, faEnvelope, faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
+import { faIdCard } from "@fortawesome/free-regular-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -17,7 +19,8 @@ const Content = styled.div`
 `;
 
 const Description = styled.div`
-  padding: 0 10px;
+  padding: 0 40px;
+  text-align: left;
 `;
 
 const Main_Menu = styled.div`
@@ -30,20 +33,68 @@ const Main_Menu = styled.div`
 `;
 
 const Project = styled.div`
-  background-color: #f47517;
+  background-color: #fff;
   border-radius: 5px 5px 5px 5px;
   -moz-border-radius: 5px 5px 5px 5px;
   -webkit-border-radius: 5px 5px 5px 5px;
-  border: 0px solid #999999;
-  margin: 10px 0;
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+  border: 1px solid #999999;
+  margin: 20px 0;
   padding: 10px 0;
-  color: #fff;
+  color: #000;
+`;
+
+const ProjectName = styled.p`
+  font-family: 'Arvo';
+  font-weight: 700;
+  font-size: 1.5rem;
+`;
+
+const ProjectDate = styled.p`
+  font-family: 'Arvo';
+  font-size: 1.2rem;
 `;
 
 const NameCreator = styled.h1`
-  margin: 5px;
-  font-family: 'Helvetica';
-  font-weight: bold;
+  margin: 5px 0 0 0;
+`;
+
+const TitleCreator = styled.p`
+  margin: 0;
+`;
+
+const DivisionLine = styled.hr`
+  height: 1px;
+  width: 250px;
+  margin: 2px auto 50px auto;
+  background-color: black;
+`;
+
+const ContactArea = styled.div`
+
+background-color: #FFFFFF;
+color: #000000;
+border: 1px solid #999999;
+width: 200px;
+margin: 0 auto 50px auto;
+padding: 20px;
+border-radius: 10px;
+position:relative;
+  & > div {
+    background-color: #fff;
+    font-size: 2rem;
+    position:absolute;
+    top: -25px;
+    right: 100px;
+    padding: 0 5px 0 5px;
+    color: #f47517;
+  }
+  & > p {
+    margin: 0 0 8px 0;
+    text-align: justify;
+  }
 `;
 
 const VistaImg = styled.img`
@@ -77,27 +128,37 @@ const Technology = styled.div`
 const FooterButtons = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 40px 0 10px 0;
+  margin: 60px 0 10px 0;
 `;
 
 const GoSite = styled.a`
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #3498DB;
   text-decoration: none;
-  min-width: 90px;
+  color: #fff;
+  min-width: 120px;
   height: 20px;
   padding: 10px 10px; 
   border-radius: 10px;
+  border: 0px solid #999999;
+  @media (max-width: 500px){
+  width: 50%;
+    } 
 `;
 
 const GoGit = styled.a`
   margin: 0 auto;
-  background-color: #fff;
+  background-color: #D35400;
   text-decoration: none;
-  min-width: 90px;
+  color: #fff;
+  min-width: 120px;
   height: 20px;
   padding: 10px 10px; 
   border-radius: 10px;
+  border: 0px solid #999999;
+  @media (max-width: 500px){
+  width: 50%;
+    } 
 `;
 
 const WAColor = styled.span`
@@ -119,19 +180,25 @@ const English = () => {
 
       <Content>
         <NameCreator>Engr. Oswaldo García Salas</NameCreator>
-        <p>Web & Mobile Applications Developer</p>
-        <p><FontAwesomeIcon icon={faPhoneAlt} /> <WAColor><FontAwesomeIcon icon={faWhatsapp} /> </WAColor>  (+52) 438 - 111 - 5621</p>
-        <p><MLColor><FontAwesomeIcon icon={faEnvelope} /> </MLColor>  chinovyou@gmail.com</p>
-        <p><PinColor><FontAwesomeIcon icon={faMapMarkerAlt} /> </PinColor>  Morelia, Michoacán. MX.</p>
+        <TitleCreator className = "sub_title">Web & Mobile Applications Developer</TitleCreator>
+        <DivisionLine/>
+        <ContactArea>
+          <div>
+            <FontAwesomeIcon icon={faIdCard} />
+          </div>
 
+          <p><FontAwesomeIcon icon={faPhoneAlt} /> <WAColor><FontAwesomeIcon icon={faWhatsapp} /> </WAColor>  (+52) 438 - 111 - 5621</p>
+          <p><MLColor><FontAwesomeIcon icon={faEnvelope} /> </MLColor>  chinovyou@gmail.com</p>
+          <p><PinColor><FontAwesomeIcon icon={faMapMarkerAlt} /> </PinColor>  Morelia, Michoacán. MX.</p>
+        </ContactArea>
       </Content>
       <Main_Menu>
         <Project>
-          <p>Lucky Jump</p>
+          <ProjectName>Lucky Jump</ProjectName>
           <VistaImg
             src={luckyjump}
           />
-          <p><FontAwesomeIcon icon={faCalendarAlt} /> Mayo 2017 - Agosto del 2018</p>
+          <ProjectDate><FontAwesomeIcon icon={faCalendarAlt} /> Mayo 2017 - Agosto del 2018</ProjectDate>
           <Description>Proyecto Lucky Jump fue programado en C# a través del motor grafico Unity Engine, Firebase además de algunas herramientas de diseño como lo es
             Photoshop, Ilustrator, etc. El proyecto tuvo como objetivo ser comercializada
                 hacia distintos tipos de usuarios a través de la plataforma de Play Store y obtener ganancias con la implementación de publicidad.</Description>
@@ -156,12 +223,12 @@ const English = () => {
             <GoSite
               href=""
             >
-              Ir al sitio
+              Go to Website
               </GoSite>
             <GoGit
               href=""
             >
-              Ver en GitHub
+              See it on GitHub
               </GoGit>
           </FooterButtons>
         </Project>
