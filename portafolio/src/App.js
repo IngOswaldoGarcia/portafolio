@@ -32,7 +32,7 @@ const Imagen = styled.img`
   max-width: 400px;
   max-height: 200px;
   border-radius: 50%;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   text-align: center;
 
   -webkit-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.75);
@@ -40,6 +40,13 @@ const Imagen = styled.img`
   box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.75);
 `;
 
+const LanguageButton = styled.div`
+min-width: 80px;
+display: flex;
+  & > p {
+    margin-top: 15px;
+  }
+`;
 
 function App() {
 
@@ -59,15 +66,17 @@ function App() {
         <AboutMessage
           language={language}
         />
-        <Social />
-        <p>EN</p>
-        <label className="switch">
-          <input type="checkbox"
+        <LanguageButton>
+          <p>EN</p>
+          <label className="switch">
+            <input type="checkbox"
                       onChange={handleChangeLanguage}
-          ></input>
-          <span className="slider round"></span>
-          </label>
-          <p>ES</p>
+            ></input>
+            <span className="slider round"></span>
+            </label>
+            <p>ES</p>
+        </LanguageButton>
+
         </TopOptions>
         <Imagen
           src={foto}

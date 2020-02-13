@@ -20,7 +20,11 @@ const Content = styled.div`
 
 const Description = styled.div`
   padding: 0 40px;
-  text-align: left;
+  text-align: justify;
+  @media (max-width: 500px){
+    padding: 0 10px;
+    font-size: 0.8rem;
+    } 
 `;
 
 const Main_Menu = styled.div`
@@ -44,6 +48,10 @@ const Project = styled.div`
   margin: 20px 0;
   padding: 10px 0;
   color: #000;
+  @media (max-width: 500px){
+    padding-bottom: 0;
+    margin-bottom: 0;
+    } 
 `;
 
 const ProjectName = styled.p`
@@ -55,6 +63,9 @@ const ProjectName = styled.p`
 const ProjectDate = styled.p`
   font-family: 'Arvo';
   font-size: 1.2rem;
+  @media (max-width: 500px){
+    font-size: 1rem;
+    } 
 `;
 
 const NameCreator = styled.h1`
@@ -109,6 +120,9 @@ const VistaImg = styled.img`
       transition: 0.2s;
       border-radius: 0;
   }
+  @media (max-width: 500px){
+    width: 100%;
+    } 
   `;
 
 const TechIcon = styled.img`
@@ -143,7 +157,14 @@ const GoSite = styled.a`
   border: 0px solid #999999;
   @media (max-width: 500px){
   width: 50%;
+  margin: 0 1px 0 2px;
+  padding: 20px 0;
     } 
+    &:hover {
+      transition-timing-function: ease-out;
+      transition: 0.3s;
+      background-color: #2E86C1;
+  }
 `;
 
 const GoGit = styled.a`
@@ -158,7 +179,14 @@ const GoGit = styled.a`
   border: 0px solid #999999;
   @media (max-width: 500px){
   width: 50%;
+  margin: 0 2px 0 1px;
+  padding: 20px 0;
     } 
+    &:hover {
+      transition-timing-function: ease-out;
+      transition: 0.3s;
+      background-color: #BA4A00;
+  }
 `;
 
 const WAColor = styled.span`

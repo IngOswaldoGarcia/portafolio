@@ -1,6 +1,7 @@
 import React from 'react';
 import Popup from "reactjs-popup";
 import styled from '@emotion/styled'; 
+import Social from "./Social";
 
 const AboutMessage = ({language}) => {
 
@@ -28,27 +29,27 @@ const AboutButton = styled.button`
         <a className="close" onClick={close}>
           &times;
         </a>
-        <div className="header"> Modal Title </div>
+        <div className="header"> Hola! </div>
         <div className="content">
-          {" "}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, a nostrum.
-          Dolorem, repellat quidem ut, minima sint vel eveniet quibusdam voluptates
-          delectus doloremque, explicabo tempore dicta adipisci fugit amet dignissimos?
-          <br />
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur sit
-          commodi beatae optio voluptatum sed eius cumque, delectus saepe repudiandae
-          explicabo nemo nam libero ad, doloribus, voluptas rem alias. Vitae?
-        </div>
-        <div className="actions">
-          <button
-            className="button"
-            onClick={() => {
-              console.log("modal closed ");
-              close();
-            }}
-          >
-            close modal
-          </button>
+          <div>
+              <p>          
+                  Mi nombre es Oswaldo, soy un joven ingeniero en sistemas, 
+                  programador, diseñador web y de videojuegos, apasionado por cualquier
+                  tipo de proyectos de software.</p>
+              <p>
+                  Me gusta que las cosas se vean bien y que funcionen mejor. Que sea un deleite
+                  visual para quien lo mire. Muy enfocado en los pequeños detalles.
+              </p>
+              <p>
+                  Actualmente vivo en Morelia, Michoacán en México y siempre estoy en búsqueda de
+                  nuevas experiencias laborales, buscando dar lo mejor de mi en cada proyecto y 
+                  que los usuarios disfruten de mi trabajo
+              </p>
+          </div>
+          <div>
+              <p>Sígueme:</p>
+              <Social/>
+          </div>
         </div>
       </div>
     )}

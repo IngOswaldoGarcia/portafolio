@@ -4,14 +4,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from '@emotion/styled';
 
 const SocialMenu = styled.div`
-  width: 40%;
+  width: 80%;
   margin: 0 auto;
   padding: 0 20px;
   display: inline-block;
 `;
 const Social__Network = styled.a`
   margin: 0 5%;
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-decoration:none;
 `;
 
