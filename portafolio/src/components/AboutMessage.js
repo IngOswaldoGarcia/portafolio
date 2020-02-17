@@ -23,38 +23,68 @@ const AboutButton = styled.button`
 `;
 
     return ( 
-    <Popup trigger={<AboutButton className="button"> {!(language) ? 'About Me' : 'Sobre mí'}  </AboutButton>} modal>
-    {close => (
-      <div className="modal">
-        <a className="close" onClick={close}>
-          &times;
-        </a>
-        <div className="header"> Hola! </div>
-        <div className="content">
-          <div>
-              <p>          
-                  Mi nombre es Oswaldo, soy un joven ingeniero en sistemas, 
-                  programador, diseñador web y de videojuegos, apasionado por cualquier
-                  tipo de proyectos de software.</p>
-              <p>
-                  Me gusta que las cosas se vean bien y que funcionen mejor. Que sea un deleite
-                  visual para quien lo mire. Muy enfocado en los pequeños detalles.
-              </p>
-              <p>
-                  Actualmente vivo en Morelia, Michoacán en México y siempre estoy en búsqueda de
-                  nuevas experiencias laborales, buscando dar lo mejor de mi en cada proyecto y 
-                  que los usuarios disfruten de mi trabajo
-              </p>
+      !(language) ?
+        <Popup trigger={<AboutButton className="button">About Me</AboutButton>} modal>
+        {close => (
+          <div className="modal">
+            <a className="close" onClick={close}>
+              &times;
+            </a>
+            <div className="header"> HELLO!</div>
+            <div className="content">
+              <div className="texto">
+                  <p>          
+                  My name is Oswaldo, I'm a young Engineer of computer systems, programmer, web and game designer, passionate about every software project I develop.</p>
+                  <p>
+                  I love it when things look really good and are useful too. Always hoping that every person who sees it enjoys the work done. I'm very focused on small details.
+                  </p>
+                  <p>
+                  Now, I'm living at Morelia City, Michoacán on México and I'm always looking for new work experiences to do my best in every project and all users enjoy my work, my passion.
+                  </p>
+              </div>
+              <div>
+                  <p className="followSpace">Follow me:</p>
+                  <Social/>
+              </div>
+            </div>
           </div>
-          <div>
-              <p>Sígueme:</p>
-              <Social/>
+        )}
+        </Popup>
+        :
+        <Popup trigger={<AboutButton className="button"> Sobre mí </AboutButton>} modal>
+        {close => (
+        <div className="modal">
+          <a className="close" onClick={close}>
+            &times;
+          </a>
+          <div className="header"> ¡HOLA!</div>
+          <div className="content">
+            <div className="texto">
+                <p>          
+                Mi nombre es Oswaldo, soy un joven ingeniero en sistemas, 
+                programador, diseñador web y de videojuegos, apasionado por cualquier
+                tipo de proyectos de software.</p>
+                <p>
+                Me gusta que las cosas se vean bien y que funcionen mejor. Que sea un deleite
+                visual para quien lo mire. Muy enfocado en los pequeños detalles.
+                </p>
+                <p>
+                Actualmente vivo en Morelia, Michoacán en México y siempre estoy en búsqueda de
+                nuevas experiencias laborales, buscando dar lo mejor de mi en cada proyecto y 
+                que los usuarios disfruten de mi trabajo.
+                </p>
+            </div>
+            <div>
+                <p className="followSpace">Sígueme:</p>
+                <Social/>
+            </div>
           </div>
         </div>
-      </div>
-    )}
-  </Popup>
+        )}
+        </Popup>
+        
 );}
 
- 
 export default AboutMessage;
+
+

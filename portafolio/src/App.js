@@ -58,6 +58,7 @@ function App() {
 
   const handleChangeLanguage = e => {
     changeLanguage(e.target.checked);
+
   }
 
   return (

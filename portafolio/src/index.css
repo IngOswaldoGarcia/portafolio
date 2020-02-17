@@ -65,6 +65,15 @@ p.precio{
 .popup-content{
   border-radius: 30px;
   background-color: #fff;
+  padding: 5px 5%!important;
+  font-family: 'Arvo';
+}
+.texto{
+  text-align: left;
+}
+.followSpace{
+  text-align: left;
+  font-weight: 700;
 }
 .modal {
   font-size: 12px;

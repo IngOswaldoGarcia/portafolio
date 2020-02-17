@@ -9,6 +9,7 @@ const SocialMenu = styled.div`
   padding: 0 20px;
   display: inline-block;
 `;
+
 const Social__Network = styled.a`
   margin: 0 5%;
   font-size: 2.5rem;
@@ -43,7 +44,6 @@ const Social = () => {
                 </LEColor>
             </Social__Network>
             <Social__Network
-
                 href="http://github.com"
                 target="_blank"
             >
