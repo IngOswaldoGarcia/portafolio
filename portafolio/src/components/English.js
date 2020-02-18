@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import styled from '@emotion/styled';
 
-import vista from '../vista.jpg';
 import csharp from '../csharp.png';
 import unity from '../unity.png';
 import firebase from '../fire.png';
@@ -16,6 +15,8 @@ import java from '../java.png';
 import html from '../html.png';
 import css from '../css.png';
 import mysql from '../mysql.png';
+import bootstrap from '../bootstrap.png';
+import android from '../AS.png';
 
 //import axios from 'axios';
 import { faPhoneAlt, faMapMarkerAlt, faEnvelope, faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
@@ -38,9 +39,8 @@ const Description = styled.div`
 
 const Main_Menu = styled.div`
     margin: 0 auto;
-    display: inline-grid;
+    display: grid;
     @media (min-width: 992px){
-      display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 2rem;
     } 
@@ -56,8 +56,9 @@ const Project = styled.div`
   box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
   border: 1px solid #999999;
   margin: 40px 0;
-  padding: 30px 0 60px 0;
+  padding: 30px 0 90px 0;
   color: #000;
+  position: relative;
   @media (max-width: 500px){
     padding-bottom: 0;
     margin-bottom: 0;
@@ -142,19 +143,26 @@ const TechIcon = styled.img`
 `;
 
 const ListTechnologies = styled.div`
-  float: right;
-  margin-top: 20px;
+  display:flex;
+  justify-content:space-between;
+  margin: 20px auto 0 auto;
   width: 60%;
 `;
 
 const Technology = styled.div`
-  margin: 0 5px;
+`;
+
+const ExtraTechnology = styled.div`
+  margin-top: 20px;
 `;
 
 const FooterButtons = styled.div`
   display: flex;
   justify-content: space-between;
-  margin: 60px 0 10px 0;
+  margin: 60px auto 10px auto;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   @media (max-width: 500px){
     margin: 60px 0 0 0;
     } 
@@ -222,7 +230,7 @@ const English = () => {
     <Fragment>
 
       <Content>
-        <NameCreator>Engr. Oswaldo García Salas</NameCreator>
+        <NameCreator> Oswaldo García Salas</NameCreator>
         <TitleCreator className = "sub_title">Web & Mobile Applications Developer</TitleCreator>
         <DivisionLine/>
         <ContactArea>
@@ -296,7 +304,10 @@ const English = () => {
                 src={javaScript}
               />
             </Technology>
-            <Technology>
+
+          </ListTechnologies>
+          <ListTechnologies>
+          <Technology>
               <TechIcon
                 src={jquery}
               />
@@ -335,17 +346,34 @@ const English = () => {
           <ListTechnologies>
             <Technology>
               <TechIcon
-                src={csharp}
+                src={html}
               />
             </Technology>
             <Technology>
               <TechIcon
-                src={unity}
+                src={css}
               />
             </Technology>
             <Technology>
               <TechIcon
-                src={firebase}
+                src={bootstrap}
+              />
+            </Technology>
+          </ListTechnologies>
+          <ListTechnologies>
+          <Technology>
+              <TechIcon
+                src={php}
+              />
+            </Technology>
+            <Technology>
+              <TechIcon
+                src={javaScript}
+              />
+            </Technology>
+            <Technology>
+              <TechIcon
+                src={mysql}
               />
             </Technology>
           </ListTechnologies>
@@ -365,20 +393,26 @@ const English = () => {
           <ListTechnologies>
             <Technology>
               <TechIcon
-                src={csharp}
+                src={java}
               />
             </Technology>
             <Technology>
               <TechIcon
-                src={unity}
+                src={android}
               />
             </Technology>
             <Technology>
               <TechIcon
-                src={firebase}
+                src={php}
               />
             </Technology>
           </ListTechnologies>
+            <ExtraTechnology>
+              <TechIcon
+                src={sqlite}
+              />
+            </ExtraTechnology>
+
           <FooterButtons>
             <GoGit
               href=""
@@ -394,17 +428,17 @@ const English = () => {
           <ListTechnologies>
             <Technology>
               <TechIcon
-                src={csharp}
+                src={html}
               />
             </Technology>
             <Technology>
               <TechIcon
-                src={unity}
+                src={javaScript}
               />
             </Technology>
             <Technology>
               <TechIcon
-                src={firebase}
+                src={jquery}
               />
             </Technology>
           </ListTechnologies>

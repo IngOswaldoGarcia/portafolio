@@ -67,6 +67,7 @@ p.precio{
   background-color: #fff;
   padding: 5px 5%!important;
   font-family: 'Arvo';
+  max-width: 450px;
 }
 .texto{
   text-align: left;
