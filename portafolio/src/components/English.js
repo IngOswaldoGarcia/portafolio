@@ -40,7 +40,7 @@ const Description = styled.div`
   } 
 `;
 
-const Main_Menu = styled.div`
+const MainMenu = styled.div`
     margin: 0 auto;
     display: grid;
     @media (min-width: 992px){
@@ -308,7 +308,7 @@ const English = () => {
           <p><PinColor><FontAwesomeIcon icon={faMapMarkerAlt} /> </PinColor>  Morelia, Michoacán. MX.</p>
         </ContactArea>
       </Content>
-      <Main_Menu>
+      <MainMenu>
         <Project>
           <ProjectName>Lucky Jump</ProjectName>
           <VistaImg
@@ -335,12 +335,14 @@ const English = () => {
           </ListTechnologies>
           <FooterButtons>
             <GoSite
-              href=""
+              href="https://play.google.com/store/apps/details?id=com.randomgames.games.luckyjump&hl=es_419"
+              target="_blank"
             >
               Go to Website
               </GoSite>
             <GoGit
-              href=""
+              href="https://github.com/IngOswaldoGarcia/LuckyJump"
+              target="_blank"
             >
               See it on GitHub
               </GoGit>
@@ -390,12 +392,14 @@ const English = () => {
           </ListTechnologies>
           <FooterButtons>
             <GoSite
-              href=""
+              href="https://nayar.000webhostapp.com/principal.php?close_session=true"
+              target="_blank"
             >
               Go to Website
               </GoSite>
             <GoGit
-              href=""
+              href="https://github.com/IngOswaldoGarcia/nayar"
+              target="_blank"
             >
               See it on GitHub
               </GoGit>
@@ -445,7 +449,8 @@ const English = () => {
           <FooterButtons>
 
             <GoGit
-              href=""
+              href="https://github.com/IngOswaldoGarcia/AgenciaDeViajes"
+              target="_blank"
             >
               See it on GitHub
               </GoGit>
@@ -480,7 +485,8 @@ const English = () => {
 
           <FooterButtons>
             <GoGit
-              href=""
+              href="https://github.com/IngOswaldoGarcia/Bitacora"
+              target="_blank"
             >
               See it on GitHub
               </GoGit>
@@ -509,13 +515,14 @@ const English = () => {
           </ListTechnologies>
           <FooterButtons>
             <GoGit
-              href=""
+              href="https://github.com/IngOswaldoGarcia/DeltaGYM"
+              target="_blank"
             >
               See it on GitHub
               </GoGit>
           </FooterButtons>
         </Project>
-      </Main_Menu>
+      </MainMenu>
     </Fragment>
   );
 }

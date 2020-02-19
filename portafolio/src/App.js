@@ -1,8 +1,7 @@
-import React, { useState} from 'react';
+import React, {useState} from 'react';
 import styled from '@emotion/styled';
 import Spanish from './components/Spanish';
 import English from './components/English';
-import Social from './components/Social';
 import AboutMessage from './components/AboutMessage';
 import foto from './foto.jpg';
 

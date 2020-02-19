@@ -1,5 +1,5 @@
 import React from 'react';
-import { faFacebookSquare, faTwitterSquare, faInstagramSquare, faLinkedin, faGithubSquare, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { faFacebookSquare, faTwitterSquare, faInstagramSquare, faLinkedin, faGithubSquare} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from '@emotion/styled';
 
@@ -10,7 +10,7 @@ const SocialMenu = styled.div`
   display: inline-block;
 `;
 
-const Social__Network = styled.a`
+const SocialNetwork = styled.a`
   margin: 0 5%;
   font-size: 2.5rem;
   text-decoration:none;
@@ -38,46 +38,46 @@ const IGColor = styled.span`
 const Social = () => {
     return (
         <SocialMenu>
-            <Social__Network
-                href="http://linkedin.com"
+            <SocialNetwork
+                href="https://www.linkedin.com/in/ing-oswaldo-garcia/"
                 target="_blank"
             >
                 <LEColor>
                     <FontAwesomeIcon icon={faLinkedin} />
                 </LEColor>
-            </Social__Network>
-            <Social__Network
-                href="http://github.com"
+            </SocialNetwork>
+            <SocialNetwork
+                href="https://github.com/IngOswaldoGarcia"
                 target="_blank"
             >
                 <GHColor>
                     <FontAwesomeIcon icon={faGithubSquare} />
                 </GHColor>
-            </Social__Network>
-            <Social__Network
-                href="http://fb.com"
+            </SocialNetwork>
+            <SocialNetwork
+                href="https://www.facebook.com/oswaldo.garcia.16940599"
                 target="_blank"
             >
                 <FBColor>
                     <FontAwesomeIcon icon={faFacebookSquare} />
                 </FBColor>
-            </Social__Network>
-            <Social__Network
-                href="http://twitter.com"
+            </SocialNetwork>
+            <SocialNetwork
+                href="https://twitter.com/Chinovyou"
                 target="_blank"
             >
                 <TTColor>
                     <FontAwesomeIcon icon={faTwitterSquare} />
                 </TTColor>
-            </Social__Network>
-            <Social__Network
-                href="http://instagram.com"
+            </SocialNetwork>
+            <SocialNetwork
+                href="https://www.instagram.com/chinovyou1"
                 target="_blank"
             >
                 <IGColor>
                     <FontAwesomeIcon icon={faInstagramSquare} />
                 </IGColor>
-            </Social__Network>
+            </SocialNetwork>
         </SocialMenu>
     );
 }

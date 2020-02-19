@@ -40,7 +40,7 @@ const Description = styled.div`
   } 
 `;
 
-const Main_Menu = styled.div`
+const MainMenu = styled.div`
     margin: 0 auto;
     display: grid;
     @media (min-width: 992px){
@@ -293,7 +293,6 @@ const Spanish = () => {
 
   return (
     <Fragment>
-
       <Content>
         <NameCreator> Oswaldo García Salas</NameCreator>
         <TitleCreator className = "sub_title">Desarrollador de Aplicaciones Web y Móviles</TitleCreator>
@@ -308,7 +307,7 @@ const Spanish = () => {
           <p><PinColor><FontAwesomeIcon icon={faMapMarkerAlt} /> </PinColor>  Morelia, Michoacán. MX.</p>
         </ContactArea>
       </Content>
-      <Main_Menu>
+      <MainMenu>
         <Project>
           <ProjectName>Lucky Jump</ProjectName>
           <VistaImg
@@ -335,12 +334,14 @@ const Spanish = () => {
           </ListTechnologies>
           <FooterButtons>
             <GoSite
-              href=""
+              href="https://play.google.com/store/apps/details?id=com.randomgames.games.luckyjump&hl=es_419"
+              target="_blank"
             >
               Ir al Sítio
               </GoSite>
             <GoGit
-              href=""
+              href="https://github.com/IngOswaldoGarcia/LuckyJump"
+              target="_blank"
             >
               Ver codigo en GitHub
               </GoGit>
@@ -391,12 +392,14 @@ const Spanish = () => {
           </ListTechnologies>
           <FooterButtons>
           <GoSite
-              href=""
+              href="https://nayar.000webhostapp.com/principal.php?close_session=true"
+              target="_blank"
             >
               Ir al Sítio
               </GoSite>
             <GoGit
-              href=""
+              href="https://github.com/IngOswaldoGarcia/nayar"
+              target="_blank"
             >
               Ver codigo en GitHub
               </GoGit>
@@ -445,7 +448,8 @@ const Spanish = () => {
           </ListTechnologies>
           <FooterButtons>
           <GoGit
-              href=""
+              href="https://github.com/IngOswaldoGarcia/AgenciaDeViajes"
+              target="_blank"
             >
               Ver codigo en GitHub
               </GoGit>
@@ -480,7 +484,8 @@ const Spanish = () => {
 
           <FooterButtons>
           <GoGit
-              href=""
+              href="https://github.com/IngOswaldoGarcia/Bitacora"
+              target="_blank"
             >
               Ver codigo en GitHub
               </GoGit>
@@ -509,13 +514,14 @@ const Spanish = () => {
           </ListTechnologies>
           <FooterButtons>
           <GoGit
-              href=""
+              href="https://github.com/IngOswaldoGarcia/DeltaGYM"
+              target="_blank"
             >
               Ver codigo en GitHub
               </GoGit>
           </FooterButtons>
         </Project>
-      </Main_Menu>
+      </MainMenu>
     </Fragment>
   );
 }

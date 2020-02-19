@@ -2,6 +2,7 @@ import React from 'react';
 import Popup from "reactjs-popup";
 import styled from '@emotion/styled'; 
 import Social from "./Social";
+import PropTypes from 'prop-types';
 
 const AboutMessage = ({language}) => {
 
@@ -34,9 +35,8 @@ const AboutButton = styled.button`
         <Popup trigger={<AboutButton className="button">About Me</AboutButton>} modal>
         {close => (
           <div className="modal">
-            <a className="close" onClick={close}>
-              &times;
-            </a>
+            <input type="button" className="close" onClick={close} value="&times;" />
+              
             <div className="header"> HELLO!</div>
             <div className="content">
               <div className="texto">
@@ -61,9 +61,7 @@ const AboutButton = styled.button`
         <Popup trigger={<AboutButton className="button"> Sobre mí </AboutButton>} modal>
         {close => (
         <div className="modal">
-          <a className="close" onClick={close}>
-            &times;
-          </a>
+          <input type="button" className="close" onClick={close} value="&times;"/>
           <div className="header"> ¡HOLA!</div>
           <div className="content">
             <div className="texto">
@@ -91,6 +89,10 @@ const AboutButton = styled.button`
         </Popup>
         
 );}
+
+AboutMessage.propTypes = {
+  language: PropTypes.bool.isRequired
+}
 
 export default AboutMessage;
 
