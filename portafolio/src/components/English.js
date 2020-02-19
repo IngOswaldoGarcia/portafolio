@@ -35,6 +35,9 @@ const Description = styled.div`
     padding: 0 10px;
     font-size: 0.8rem;
     } 
+  @media (min-width: 2000px){
+    font-size: 2rem;
+  } 
 `;
 
 const Main_Menu = styled.div`
@@ -44,6 +47,9 @@ const Main_Menu = styled.div`
       grid-template-columns: repeat(2, 1fr);
       column-gap: 2rem;
     } 
+    @media (min-width: 2000px){
+      column-gap: 4rem;
+  } 
 `;
 
 const Project = styled.div`
@@ -63,12 +69,20 @@ const Project = styled.div`
     padding-bottom: 0;
     margin-bottom: 0;
     } 
+
+    @media (min-width: 2000px){
+    padding-bottom: 180px;
+  } 
 `;
 
 const ProjectName = styled.p`
   font-family: 'Arvo';
   font-size: 1.5rem;
   margin: 0 50px 30px 50px;
+  @media (min-width: 2000px){
+    font-size: 3.5rem;
+    margin-top: 100px;
+  } 
 `;
 
 const ProjectDate = styled.p`
@@ -82,10 +96,17 @@ const ProjectDate = styled.p`
 
 const NameCreator = styled.h1`
   margin: 5px 0 0 0;
+  @media (min-width: 2000px){
+    font-size: 4rem;
+    margin-top: 20px;
+  } 
 `;
 
 const TitleCreator = styled.p`
   margin: 0;
+  @media (min-width: 2000px){
+    font-size: 2rem;
+  } 
 `;
 
 const DivisionLine = styled.hr`
@@ -93,6 +114,10 @@ const DivisionLine = styled.hr`
   width: 250px;
   margin: 2px auto 50px auto;
   background-color: black;
+  @media (min-width: 2000px){
+    height: 3px;
+    width: 500px;
+  } 
 `;
 
 const ContactArea = styled.div`
@@ -105,6 +130,7 @@ margin: 0 auto 50px auto;
 padding: 20px;
 border-radius: 10px;
 position:relative;
+align-items: center;
   & > div {
     background-color: #fff;
     font-size: 2rem;
@@ -118,6 +144,23 @@ position:relative;
     margin: 0 0 8px 0;
     text-align: justify;
   }
+
+  @media (min-width: 2000px){
+    width: 400px;
+    margin: 150px auto 80px auto;
+
+    & > div {
+    font-size: 4rem;
+    top: -50px;
+    right: 180px;
+    padding: 0 5px 0 5px;
+  }
+  & > p {
+    margin: 5px 0 8px 0;
+    text-align: justify;
+    font-size: 2rem;
+  }
+  } 
 `;
 
 const VistaImg = styled.img`
@@ -140,6 +183,10 @@ const VistaImg = styled.img`
 
 const TechIcon = styled.img`
     max-width: 50px;
+
+    @media (min-width: 2000px){
+      max-width: 100px;
+  } 
 `;
 
 const ListTechnologies = styled.div`
@@ -147,6 +194,9 @@ const ListTechnologies = styled.div`
   justify-content:space-between;
   margin: 20px auto 0 auto;
   width: 60%;
+  @media (min-width: 2000px){
+    margin: 80px auto;
+  } 
 `;
 
 const Technology = styled.div`
@@ -166,6 +216,9 @@ const FooterButtons = styled.div`
   @media (max-width: 500px){
     margin: 60px 0 0 0;
     } 
+    @media (min-width: 2000px){
+   padding: 30px 0;
+  } 
 `;
 
 const GoSite = styled.a`
@@ -183,6 +236,12 @@ const GoSite = styled.a`
   margin: 0 1px 2px 2px;
   padding: 20px 0;
     } 
+  @media (min-width: 2000px){
+   min-width: 280px;
+   height: 60px;
+   padding-top: 20px;
+   font-size: 2rem;
+  } 
     &:hover {
       transition-timing-function: ease-out;
       transition: 0.3s;
@@ -205,6 +264,12 @@ const GoGit = styled.a`
   margin: 0 2px 2px 1px;
   padding: 20px 0;
     } 
+  @media (min-width: 2000px){
+   min-width: 280px;
+   height: 60px;
+   padding-top: 20px;
+   font-size: 2rem;
+  } 
     &:hover {
       transition-timing-function: ease-out;
       transition: 0.3s;

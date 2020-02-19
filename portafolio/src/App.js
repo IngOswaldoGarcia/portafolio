@@ -20,6 +20,10 @@ const Container = styled.div`
       background-color: #fff;
       border-radius: 0;
     } 
+    @media (min-width: 2000px){
+    margin-top: 100px;
+    padding-top: 100px;
+    } 
 `;
 
 const TopOptions = styled.div`
@@ -28,7 +32,6 @@ const TopOptions = styled.div`
 `;
 
 const Imagen = styled.img`
-
   max-width: 400px;
   max-height: 200px;
   border-radius: 50%;
@@ -38,6 +41,12 @@ const Imagen = styled.img`
   -webkit-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.75);
   box-shadow: 0px 0px 15px 1px rgba(0,0,0,0.75);
+
+  @media (min-width: 2000px){
+    max-width: 1200px;
+    max-height: 600px;
+    margin-top: 6rem;
+    } 
 `;
 
 const LanguageButton = styled.div`
@@ -46,6 +55,9 @@ display: flex;
   & > p {
     margin-top: 15px;
   }
+  @media (min-width: 2000px){
+    font-size:2rem;
+    } 
 `;
 
 function App() {

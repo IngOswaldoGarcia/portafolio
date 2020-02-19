@@ -14,6 +14,9 @@ const Social__Network = styled.a`
   margin: 0 5%;
   font-size: 2.5rem;
   text-decoration:none;
+  @media (min-width: 2000px){
+    font-size: 5rem;
+  } 
 `;
 
 const LEColor = styled.span`

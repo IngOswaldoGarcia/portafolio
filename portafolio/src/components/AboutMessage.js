@@ -20,6 +20,13 @@ const AboutButton = styled.button`
     transition-timing-function: ease-in;
     transition: 0.3s;
   }
+  @media (min-width: 2000px){
+    padding: 20px 20px;
+    min-width: 180px;
+    min-height: 80px;
+    max-height: 100px;
+    font-size: 2rem;
+  } 
 `;
 
     return ( 
