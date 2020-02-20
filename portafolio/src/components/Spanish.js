@@ -66,7 +66,7 @@ const Project = styled.div`
   color: #000;
   position: relative;
   @media (max-width: 500px){
-    padding-bottom: 0;
+    padding-bottom: 120px;
     margin-bottom: 0;
     } 
 
@@ -116,7 +116,10 @@ const DivisionLine = styled.hr`
   background-color: black;
   @media (min-width: 2000px){
     height: 3px;
-    width: 600px;
+    width: 500px;
+  } 
+  @media (min-width: 500px){
+    margin-bottom: 75px;
   } 
 `;
 

@@ -8,14 +8,14 @@ import foto from './foto.jpg';
 const Container = styled.div`
     max-width: 70%;
     margin: 50px auto;
-    padding: 25px 5%; 
+    padding: 25px 5% 75px 5%; 
     background-color: #fff;
     border-radius: 15px;
     text-align: center;
     @media (max-width: 500px){
       max-width: 100%;
       margin: 0px auto;
-      padding: 20px 5%; 
+      padding: 20px 5px; 
       background-color: #fff;
       border-radius: 0;
     } 
@@ -28,6 +28,7 @@ const Container = styled.div`
 const TopOptions = styled.div`
   display: flex;
   justify-content: space-between;
+  padding: 0 5%;
 `;
 
 const Imagen = styled.img`
@@ -52,10 +53,11 @@ const LanguageButton = styled.div`
 min-width: 80px;
 display: flex;
   & > p {
-    margin-top: 15px;
+    margin-top: 10px;
+    font-size:1.5rem;
   }
   @media (min-width: 2000px){
-    font-size:2rem;
+    font-size:1rem;
     } 
 `;
 
